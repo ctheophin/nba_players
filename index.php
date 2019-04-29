@@ -171,8 +171,6 @@ $year = $_POST["PlayerYear"];
 	Blocks > ($blocks - 0.6) && Blocks < ($blocks + 0.6) AND Steals > ($steals - 0.6) && Steals < ($steals + 0.6) LIMIT 5";
 
 
-
-
 	$Players2 = mysqli_query($conn, $query2);
 ?>
 <table id="two" class="table table-sm table-hover table-bordered table-responsive">
@@ -192,11 +190,6 @@ $year = $_POST["PlayerYear"];
 	  <th>Effective Field Goal %</th>
 	  <th>Stats</th>
 	</tr>
-
-<!-- Begin PHP while-loop to display database query results
-     with each row enclosed in TD tags.
-	   Each time it loops, it writes ONE ROW -->
-
 
 	<?php while ($row2 = mysqli_fetch_assoc($Players2)) :  ?>
 		<?php
@@ -234,9 +227,6 @@ $year = $_POST["PlayerYear"];
 <?php endwhile;  ?>
 
 
-<!-- end the PHP while-loop
-     everything else on this page is normal HTML -->
-
 </table>
 
 
@@ -247,16 +237,6 @@ $year = $_POST["PlayerYear"];
 <p class="lead">Welcome to Compare A Player, where we try to match a player of your choosing to the 5 closest stat lines in NBA history going back to the 1968-1969 season. The stats we look at are points, assists, steals, blocks, rebounds, field goal percentage, free throw percentage and effective field goal percentage. Insert a name and a year and click Submit then click Show Results to get your five closest stat lines. Enjoy!</p>
 </div>
 </footer>
-
-
-
-
-
-
-
-
-
-
 
 </body>
 <script src="scripts/jquery.min.js"></script>
