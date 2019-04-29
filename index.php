@@ -30,7 +30,8 @@ $year = $_POST["PlayerYear"];
 
 	  <div class="form-group">
 	      <label class="col-form-label text md-right col-lg-3 col-md-3 col-sm-6 col-xs-12"  for="name">Insert Player Name</label>
-	      <input type="text" class="form-control col-lg-3" id="Name" name="PlayerName" maxlength="30" placeholder="Name Of Player" required>
+	      <input type="text" value="<?php if(isset($_POST['PlayerName'])){
+					echo $_POST["PlayerName"];}?>" class="form-control col-lg-3" id="Name" name="PlayerName" maxlength="30" placeholder="Name Of Player" required>
 			</div>
 		<div class="form-group">
 	      <label class="col-form-label col-lg-3" for="Year">Please Select A Year</label>
@@ -232,10 +233,13 @@ $year = $_POST["PlayerYear"];
 
 
 </div> <!-- close container -->
-<footer id='exp' class="container-fluid text-center">
+<div id='exp' class="container-fluid">
   <div class="row">
 <p class="lead">Welcome to Compare A Player, where we try to match a player of your choosing to the 5 closest stat lines in NBA history going back to the 1968-1969 season. The stats we look at are points, assists, steals, blocks, rebounds, field goal percentage, free throw percentage and effective field goal percentage. Insert a name and a year and click Submit then click Show Results to get your five closest stat lines. Enjoy!</p>
 </div>
+</div>
+<footer class="text-center">
+Here's the link to my <a href="https://github.com/ctheophin/nba_players" target="https://github.com/ctheophin/nba_players">GitHub!</a></p>
 </footer>
 
 </body>
