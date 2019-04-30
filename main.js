@@ -4,9 +4,18 @@ function hideAll() {
   $('#exp').show();
 
 };
+
 hideAll();
-  $('#results').click(function() {
+  $('#submit').click(function() {
     hideAll();
+  switch ($(this).attr("id")) {
+      case "submit":
+        $('#exp').hide();
+        break;
+    }
+
+  });
+  $('#results').click(function() {
   switch ($(this).attr("id")) {
       case "results":
         $('#two').show();
